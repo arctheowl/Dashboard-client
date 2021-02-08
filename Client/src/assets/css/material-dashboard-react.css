@@ -13,6 +13,14 @@
  * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
  */
+
+.icon {
+  height: 55px;
+  width: 55px;
+}
+
+
+
 .ct-grid {
   stroke: rgba(255, 255, 255, 0.2);
   stroke-width: 1px;
@@ -251,8 +259,10 @@ footer ul li a:hover {
   border-radius: 8px 0 0 8px;
   text-align: center;
   top: 120px;
-  .badge-primary-background-color: #9c27b0;
 }
+
+.badge-primary-background-color: #9c27b0;
+
 
 .fixed-plugin .SocialMediaShareButton,
 .fixed-plugin .github-btn {

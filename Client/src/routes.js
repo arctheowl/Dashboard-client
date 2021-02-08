@@ -7,8 +7,9 @@ import Person from "@material-ui/icons/Person";
 import LibraryBooks from "@material-ui/icons/LibraryBooks";
 import BubbleChart from "@material-ui/icons/BubbleChart";
 import LocationOn from "@material-ui/icons/LocationOn";
-import AccessibilityIcon from '@material-ui/icons/Accessibility';
 import Notifications from "@material-ui/icons/Notifications";
+import TableChartIcon from '@material-ui/icons/TableChart';
+import ExitToApp from '@material-ui/icons/ExitToApp';
 
 // core components/views for Admin layout
 import DashboardPage from "views/Dashboard/Dashboard.js";
@@ -21,16 +22,31 @@ import NotificationsPage from "views/Notifications/Notifications.js";
 import MonetizationOnIcon from '@material-ui/icons/MonetizationOn';
 
 // My own components and views
-import Liam from "views/Liam/Liam.js"
+
 import SignUp from "views/SignUp/Signup";
-import Finance from "views/Finance/Finance"
+import Finance from "views/Finance/Finance";
+import BigTable from "views/BigTable/BigTable"
 
 const dashboardRoutes = [
   {
-    path: "/dashboard",
-    name: "Dashboard",
-    icon: Dashboard,
-    component: DashboardPage,
+    path: "/Finance",
+    name: "Finance",
+    icon: MonetizationOnIcon,
+    component: Finance,
+    layout: "/admin"
+  },
+   {
+    path: "/signup",
+    name: "Signup",
+    icon: ExitToApp,
+    component: SignUp,
+    layout: "/admin"
+  },
+  {
+    path: "/bigtable",
+    name: "BigTable",
+    icon: TableChartIcon,
+    component: BigTable,
     layout: "/admin"
   },
   {
@@ -42,7 +58,7 @@ const dashboardRoutes = [
   },
   {
     path: "/table",
-    name: "Table List",
+    name: "Multi Table",
     icon: "content_paste",
     component: TableList,
     layout: "/admin"
@@ -69,33 +85,20 @@ const dashboardRoutes = [
     layout: "/admin"
   },
   {
+    path: "/dashboard",
+    name: "Dashboard",
+    icon: Dashboard,
+    component: DashboardPage,
+    layout: "/admin"
+  },
+  {
     path: "/notifications",
     name: "Notifications",
     icon: Notifications,
     component: NotificationsPage,
     layout: "/admin"
-  },
-  {
-    path: "/Liam",
-    name: "Liam",
-    icon: AccessibilityIcon,
-    component: Liam,
-    layout: "/admin"
-  },
-  {
-    path: "/Finance",
-    name: "Finance",
-    icon: MonetizationOnIcon,
-    component: Finance,
-    layout: "/admin"
-  },
-   {
-    path: "/signup",
-    name: "Signup",
-    icon: MonetizationOnIcon,
-    component: SignUp,
-    layout: "/admin"
   }
+ 
 ];
 
 export default dashboardRoutes;
